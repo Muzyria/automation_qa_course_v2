@@ -10,7 +10,7 @@ class TextBoxPageLocators:
     SUBMIT = (By.CSS_SELECTOR, 'button[id="submit"]')
 
     #created form
-    CREATED_FULL_NAME = (By.CSS_SELECTOR, 'p[id="name"]')
+    CREATED_FULL_NAME = (By.CSS_SELECTOR, 'p[id="name"]')  # '#output #name'
     CREATED_EMAIL = (By.CSS_SELECTOR, 'p[id="email"]')
     CREATED_CURRENT_ADDRESS = (By.CSS_SELECTOR, 'p[id="currentAddress"]')
     CREATED_PERMANENT_ADDRESS = (By.CSS_SELECTOR, 'p[id="permanentAddress"]')
