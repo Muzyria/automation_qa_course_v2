@@ -53,4 +53,9 @@ class CheckBoxPage(BasePage):
             title_item = box.find_element("xpath", self.locators.TITLE_ITEM)
             # print(title_item.text)
             data.append(title_item.text)
+        print()
         print(data)
+
+        output = [i.text for i in self.elements_are_presents(self.locators.OUTPUT_RESULT)]
+
+        print(output)
