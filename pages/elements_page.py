@@ -43,7 +43,7 @@ class CheckBoxPage(BasePage):
             item = random.choice(item_list)
             self.go_to_element(item)
             item.click()
-            print(f'{item.text} {count}')
+            # print(f'{item.text} {count}')
             count -= 1
 
     def get_checked_checkboxes(self):
@@ -51,5 +51,6 @@ class CheckBoxPage(BasePage):
         data = []
         for box in checked_list:
             title_item = box.find_element("xpath", self.locators.TITLE_ITEM)
-            print(title_item.text)
-
+            # print(title_item.text)
+            data.append(title_item.text)
+        print(data)
