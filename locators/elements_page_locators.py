@@ -15,3 +15,10 @@ class TextBoxPageLocators:
     CREATED_CURRENT_ADDRESS = (By.CSS_SELECTOR, 'p[id="currentAddress"]')
     CREATED_PERMANENT_ADDRESS = (By.CSS_SELECTOR, 'p[id="permanentAddress"]')
 
+
+class CheckBoxPageLocators:
+    """checkbox"""
+    EXPEND_ALL_BUTTON = (By.CSS_SELECTOR, 'button[title="Expand all"]')
+    COLLAPSE_ALL_BUTTON = (By.CSS_SELECTOR, 'button[title="Collapse all"]')
+
+    ITEM_LIST = (By.CSS_SELECTOR, 'span[class="rct-title"]')
