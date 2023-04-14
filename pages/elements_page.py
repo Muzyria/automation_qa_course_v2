@@ -1,3 +1,4 @@
+import random
 import time
 
 from generator.generator import generated_person
@@ -37,5 +38,11 @@ class CheckBoxPage(BasePage):
 
     def click_random_checkbox(self):
         item_list = self.elements_are_visible(self.locators.ITEM_LIST)
-        for item in item_list:
-            print(item.text)
+        count = 21
+        while count != 0:
+            item = random.choice(item_list)
+            self.go_to_element(item)
+            item.click()
+            print(f'{item.text} {count}')
+            count -= 1
+
