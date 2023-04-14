@@ -35,3 +35,5 @@ class TestElements:
             check_box_page.open_full_list()
             check_box_page.click_random_checkbox()
             time.sleep(3)
+
+            check_box_page.get_checked_checkboxes()

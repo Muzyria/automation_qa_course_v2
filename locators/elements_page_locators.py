@@ -22,3 +22,6 @@ class CheckBoxPageLocators:
     COLLAPSE_ALL_BUTTON = (By.CSS_SELECTOR, 'button[title="Collapse all"]')
 
     ITEM_LIST = (By.CSS_SELECTOR, 'span[class="rct-title"]')
+    CHECKED_ITEMS = (By.CSS_SELECTOR, 'svg[class="rct-icon rct-icon-check"]')
+    TITLE_ITEM = ('.//ancestor::span[@class="rct-text"]')
+
