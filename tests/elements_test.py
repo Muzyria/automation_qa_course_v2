@@ -36,4 +36,8 @@ class TestElements:
             check_box_page.click_random_checkbox()
             time.sleep(3)
 
-            check_box_page.get_checked_checkboxes()
+            print()
+            input_checkbox = check_box_page.get_checked_checkboxes()
+            output_checkbox = check_box_page.get_output_result()
+            print(input_checkbox)
+            print(output_checkbox)
