@@ -67,7 +67,8 @@ class RadioButtonPage(BasePage):
     locators = RadioButtonPageLocators()
 
     def select_radio_button_yes(self):
-        item = self.element_is_clicable(self.locators.YES_RADIOBUTTON)
+        # item = self.element_is_clicable(self.locators.YES_RADIOBUTTON)
+        item = self.element_is_visible(self.locators.YES_RADIOBUTTON)
         item.click()
         time.sleep(3)
 
