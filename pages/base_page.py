@@ -33,4 +33,5 @@ class BasePage:
 
 
     def element_is_clicable(self, locator, timeout=5):
+        """"Это я добавил для ознакомления"""
         return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))
