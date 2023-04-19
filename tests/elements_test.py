@@ -42,4 +42,4 @@ class TestElements:
 
             print(input_checkbox)
             print(output_checkbox)
-            assert input_checkbox == output_checkbox
+            assert input_checkbox == output_checkbox, "checkboxes have not been selected"
