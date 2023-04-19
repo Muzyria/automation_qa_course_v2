@@ -39,5 +39,7 @@ class TestElements:
             print()
             input_checkbox = check_box_page.get_checked_checkboxes()
             output_checkbox = check_box_page.get_output_result()
+
             print(input_checkbox)
             print(output_checkbox)
+            assert input_checkbox == output_checkbox

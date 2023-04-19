@@ -55,9 +55,9 @@ class CheckBoxPage(BasePage):
         data = [box.find_element("xpath", self.locators.TITLE_ITEM).text for box in self.elements_are_presents(self.locators.CHECKED_ITEMS)]
         # print()
         # print(data)
-        return data
+        return str(data).replace(".doc", "").replace(" ", "").lower()
 
     def get_output_result(self):
         output = [i.text for i in self.elements_are_presents(self.locators.OUTPUT_RESULT)]
         # print(output)
-        return output
+        return str(output).replace(" ", "").lower()
