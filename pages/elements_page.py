@@ -3,7 +3,7 @@ import time
 
 from generator.generator import generated_person
 from pages.base_page import BasePage
-from locators.elements_page_locators import TextBoxPageLocators, CheckBoxPageLocators
+from locators.elements_page_locators import TextBoxPageLocators, CheckBoxPageLocators, RadioButtonPageLocators
 
 
 class TextBoxPage(BasePage):
@@ -61,3 +61,13 @@ class CheckBoxPage(BasePage):
         output = [i.text for i in self.elements_are_presents(self.locators.OUTPUT_RESULT)]
         # print(output)
         return str(output).replace(" ", "").lower()
+
+
+class RadioButtonPage(BasePage):
+    locators = RadioButtonPageLocators()
+
+    def select_radio_button_yes(self):
+        item = self.element_is_clicable(self.locators.YES_RADIOBUTTON)
+        item.click()
+        time.sleep(3)
+
