@@ -30,7 +30,7 @@ class CheckBoxPageLocators:
 class RadioButtonPageLocators:
     """radio button"""
     # YES_RADIOBUTTON = (By.CSS_SELECTOR, 'label[class^="custom-control"][for="yesRadio"]')
-    YES_RADIOBUTTON = (By.XPATH, '//input[@id="yesRadio"]')
+    YES_RADIOBUTTON = (By.XPATH, '//*[text()="Yes"]')
 
     IMPRESSIVE_RADIOBUTTON = (By.CSS_SELECTOR, 'label[class^="custom-control"][for="impressiveRadio"]')
     NO_RADIOBUTTON = (By.CSS_SELECTOR, 'label[class^="custom-control"][for="noRadio"]')
