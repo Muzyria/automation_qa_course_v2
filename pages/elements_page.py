@@ -79,3 +79,6 @@ class RadioButtonPage(BasePage):
 
 class WebTablePage(BasePage):
     locators = WebTablePageLocators()
+
+    def add_new_person(self, count=1):
+        pass
