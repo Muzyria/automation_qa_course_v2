@@ -80,5 +80,15 @@ class RadioButtonPage(BasePage):
 class WebTablePage(BasePage):
     locators = WebTablePageLocators()
 
-    def add_new_person(self, count=1):
-        pass
+    def add_new_person(self):
+        count = 1
+        while count != 0:
+            person_info = next(generated_person())
+            firstname = person_info.full_name[0]
+            lastname = person_info.full_name[1]
+            email = person_info.email
+            age = person_info.age
+            salary = person_info.salary
+            department = person_info.department
+            count -= 1
+            return firstname, lastname, email, age, salary, department
