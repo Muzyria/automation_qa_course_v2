@@ -98,9 +98,9 @@ class WebTablePage(BasePage):
             self.element_is_visible(self.locators.AGE_INPUT).send_keys(age)
             self.element_is_visible(self.locators.SALARY_INPUT).send_keys(salary)
             self.element_is_visible(self.locators.DEPARTMENT_INPUT).send_keys(department)
-
+            self.element_is_visible(self.locators.SUBMIT).click()
             count -= 1
-            return firstname, lastname, email, age, salary, department
+            return [firstname, lastname, str(age), email, str(salary), department]
 
     def check_new_added_person(self):
         people_list = self.elements_are_present(self.locators.FULL_PEOPLE_LIST)
