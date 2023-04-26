@@ -19,7 +19,7 @@ class BasePage:
     def element_is_present(self, locator, timeout=5):
         return wait(self.driver, timeout).until(EC.presence_of_element_located(locator))
 
-    def elements_are_presents(self, locator, timeout=5):
+    def elements_are_present(self, locator, timeout=5):
         return wait(self.driver, timeout).until(EC.presence_of_all_elements_located(locator))
 
     def element_is_not_visible(self, locator, timeout=5):
@@ -32,6 +32,3 @@ class BasePage:
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
 
 
-    def element_is_clicable(self, locator, timeout=5):
-        """"Это я добавил для ознакомления"""
-        return wait(self.driver, timeout).until(EC.element_to_be_clickable(locator))
