@@ -104,7 +104,8 @@ class WebTablePage(BasePage):
 
     def check_new_added_person(self):
         people_list = self.elements_are_present(self.locators.FULL_PEOPLE_LIST)
-        data = []
-        for item in people_list:
-            data.append(item.text.splitlines())
+        # data = []
+        # for item in people_list:
+        #     data.append(item.text.splitlines())
+        data = [item.text.splitlines() for item in people_list]
         return data
