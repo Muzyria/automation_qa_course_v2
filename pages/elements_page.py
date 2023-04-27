@@ -53,13 +53,13 @@ class CheckBoxPage(BasePage):
         # for box in checked_list:
         #     title_item = box.find_element("xpath", self.locators.TITLE_ITEM)
         #     data.append(title_item.text)
-        data = [box.find_element("xpath", self.locators.TITLE_ITEM).text for box in self.elements_are_presents(self.locators.CHECKED_ITEMS)]
+        data = [box.find_element("xpath", self.locators.TITLE_ITEM).text for box in self.elements_are_present(self.locators.CHECKED_ITEMS)]
         # print()
         # print(data)
         return str(data).replace(".doc", "").replace(" ", "").lower()
 
     def get_output_result(self):
-        output = [i.text for i in self.elements_are_presents(self.locators.OUTPUT_RESULT)]
+        output = [i.text for i in self.elements_are_present(self.locators.OUTPUT_RESULT)]
         # print(output)
         return str(output).replace(" ", "").lower()
 
@@ -115,5 +115,5 @@ class WebTablePage(BasePage):
 
     def check_search_person(self):
         delete_button = self.element_is_present(self.locators.DELETE_BUTTON)
-        row = delete_button.find_element_by_xpath(self.locators.ROW_PARENT)
+        row = delete_button.find_element("xpath", self.locators.ROW_PARENT)
         return row.text.splitlines()
