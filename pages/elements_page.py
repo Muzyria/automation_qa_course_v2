@@ -5,7 +5,7 @@ from generator.generator import generated_person
 from pages.base_page import BasePage
 from locators.elements_page_locators import TextBoxPageLocators, CheckBoxPageLocators, RadioButtonPageLocators, \
     WebTablePageLocators
-
+from selenium.webdriver import Keys
 
 class TextBoxPage(BasePage):
     locators = TextBoxPageLocators()
@@ -112,6 +112,10 @@ class WebTablePage(BasePage):
 
     def search_some_person(self, key_word):
         self.element_is_visible(self.locators.SEARCH_INPUT).send_keys(key_word)
+
+    def search_clear(self, key_word):
+        """CLEAR INPUT SEARCH"""
+        [self.element_is_visible(self.locators.SEARCH_INPUT).send_keys(Keys.BACKSPACE) for _ in range(len(key_word))]
 
     def check_search_person(self):
         delete_button = self.element_is_present(self.locators.DELETE_BUTTON)

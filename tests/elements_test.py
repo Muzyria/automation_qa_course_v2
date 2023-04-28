@@ -70,9 +70,21 @@ class TestElements:
             assert new_person in table_result
 
         def test_web_table_search_person(self, driver):
+
             web_table_page = WebTablePage(driver, 'https://demoqa.com/webtables')
             web_table_page.open()
-            key_word = web_table_page.add_new_person()[random.randint(0, 5)]
-            web_table_page.search_some_person(key_word)
-            table_result = web_table_page.check_search_person()
-            assert key_word in table_result, "the person was not found in the table"
+            for _ in range(10):
+                key_word = web_table_page.add_new_person()[random.randint(0, 5)]
+                time.sleep(1)
+                web_table_page.search_some_person(key_word)
+                time.sleep(1)
+                table_result = web_table_page.check_search_person()
+                time.sleep(1)
+                print(key_word)
+                print(table_result)
+                assert key_word in table_result or key_word in "".join(table_result), "the person was not found in the table"
+                time.sleep(1)
+
+                web_table_page.search_clear(key_word)
+                time.sleep(1)
+
