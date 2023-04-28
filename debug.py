@@ -26,7 +26,9 @@ class NoTest1:
 
         full_list_people = WebDriverWait(self.driver, 5).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'div[class="rt-tr-group"]')))
         data = [line.text.splitlines() for line in full_list_people]
+
         print(data)
+        [print(i) for i in data if i != ['       ']]
 
 
 

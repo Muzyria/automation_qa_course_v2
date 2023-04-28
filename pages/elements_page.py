@@ -117,7 +117,8 @@ class WebTablePage(BasePage):
 
     def search_clear(self, key_word):
         """CLEAR INPUT SEARCH"""
-        [self.element_is_visible(self.locators.SEARCH_INPUT).send_keys(Keys.BACKSPACE) for _ in range(len(key_word))]
+        # [self.element_is_visible(self.locators.SEARCH_INPUT).send_keys(Keys.BACKSPACE) for _ in range(len(key_word))]
+        self.element_is_visible(self.locators.SEARCH_INPUT).clear()
 
     def check_search_person(self):
         delete_button = self.element_is_present(self.locators.DELETE_BUTTON)
@@ -128,8 +129,11 @@ class WebTablePage(BasePage):
         person_info = next(generated_person())
         age = person_info.age
         self.element_is_visible(self.locators.UPDATE_BUTTON).click()
+        time.sleep(3)
         self.element_is_visible(self.locators.AGE_INPUT).clear()
+        time.sleep(3)
         self.element_is_visible(self.locators.AGE_INPUT).send_keys(age)
+
         self.element_is_visible(self.locators.SUBMIT).click()
         return str(age)
 
