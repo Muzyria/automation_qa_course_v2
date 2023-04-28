@@ -86,5 +86,5 @@ class TestElements:
                 time.sleep(1)
 
                 web_table_page.search_clear(key_word)
-                time.sleep(1)
+                # time.sleep(1)
 
