@@ -24,7 +24,7 @@ def generated_person():
 def generated_file():
     path = rf'filetest{random.randint(0, 999)}.txt'
     file = open(path, 'w+')
-    file.write(f'Hello World{random.randint(0, 999)}')
+    file.write(f'Hello World {random.randint(0, 999)}')
     file.close()
     return file.name, path
 
