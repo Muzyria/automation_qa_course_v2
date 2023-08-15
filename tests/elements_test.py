@@ -11,7 +11,8 @@
 import random
 import time
 
-from pages.elements_page import TextBoxPage, CheckBoxPage, RadioButtonPage, WebTablePage, ButtonsPage, LinksPage
+from pages.elements_page import TextBoxPage, CheckBoxPage, RadioButtonPage, WebTablePage, ButtonsPage, LinksPage, \
+    UploadAndDownloadPage
 
 
 class TestElements:
