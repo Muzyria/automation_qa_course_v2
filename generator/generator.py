@@ -22,10 +22,11 @@ def generated_person():
 
 
 def generated_file():
-    path = rf'filetest{random.randint(0, 999)}.txt'
+    path = rf'C:\Git_Muzyria\automation_qa_course_v2\tests\filetest{random.randint(0, 999)}.txt'
     file = open(path, 'w+')
     file.write(f'Hello World {random.randint(0, 999)}')
     file.close()
+    print(path)
     return file.name, path
 
 
