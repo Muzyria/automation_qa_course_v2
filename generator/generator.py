@@ -26,7 +26,7 @@ def generated_file():
     file = open(path, 'w+')
     file.write(f'Hello World {random.randint(0, 999)}')
     file.close()
-    print(path)
+    # print(path)
     return file.name, path
 
 
