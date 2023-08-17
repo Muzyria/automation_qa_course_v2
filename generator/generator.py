@@ -1,3 +1,4 @@
+import os
 import random
 
 from data.data import Person, Color, Date
@@ -22,10 +23,9 @@ def generated_person():
 
 
 def generated_file():
-    path = rf'C:\Git_Muzyria\automation_qa_course_v2\tests\filetest{random.randint(0, 999)}.txt'
-    file = open(path, 'w+')
-    file.write(f'Hello World {random.randint(0, 999)}')
-    file.close()
+    path = rf'{os.getcwd()}\filetest{random.randint(0, 999)}.txt'
+    with open(path, "w+") as file:
+        file.write(f"Hello Word {random.randint(0, 999)}")
     # print(path)
     return file.name, path
 
