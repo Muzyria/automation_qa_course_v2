@@ -1,15 +1,15 @@
-# import time
-#
-# from pages.base_page import BasePage
-#
-#
+import time
+
+from pages.base_page import BasePage
+
+
 # def test(driver):
 #     page = BasePage(driver, 'https://google.com')
 #     page.open()
 #     time.sleep(3)
-
-import random
-import time
+#
+# import random
+# import time
 
 from pages.elements_page import TextBoxPage, CheckBoxPage, RadioButtonPage, WebTablePage, ButtonsPage, LinksPage, \
     UploadAndDownloadPage, DynamicPropertiesPage
