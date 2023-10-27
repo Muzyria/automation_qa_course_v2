@@ -8,7 +8,7 @@ from pages.base_page import BasePage
 #     page.open()
 #     time.sleep(3)
 #
-# import random
+import random
 # import time
 
 from pages.elements_page import TextBoxPage, CheckBoxPage, RadioButtonPage, WebTablePage, ButtonsPage, LinksPage, \
